@@ -27,7 +27,8 @@ This modular design, which separates concerns, provides opportunities for extens
 '''
 import os
 
-from commands import commands
+#from commands import commands
+import commands as commands
 
 class Option:
     def __init__(self, name, command, prep_call=None):
@@ -107,7 +108,7 @@ def loop():
     }
     clear_screen()
     print_options(options)    
-    chosen_option = get_option_choice(options)
+    chosen_option = (options)
     clear_screen()
     chosen_option.choose()
     _ = input('Press ENTER to return to menu')
