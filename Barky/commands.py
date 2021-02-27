@@ -4,7 +4,6 @@ specify and implement the business logic layer
 """
 from datetime import datetime
 import sys
-
 import requests
 
 from database import DatabaseManager
