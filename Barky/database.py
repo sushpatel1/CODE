@@ -63,6 +63,18 @@ class DatabaseManager:
             ({','.join(columns_with_types)});
             '''
         )
+    def drop_table(self, table_name):
+        '''
+        The method drops a table:
+        1. Accept two arguments: the name of the table to create, and a dictionary of column names mapped to their data types and constraints
+        2. Construct a DROP TABLE SQL statement like the one shown earlier
+        3. Execute the statement using DatabaseManager._execute
+        '''
+        self._execute(
+            f'''
+            DROP TABLE {table_name};
+            '''
+        )
 
     def add(self, table_name, data):
         '''
